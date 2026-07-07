@@ -12,16 +12,16 @@ export default function TracksPage() {
         <SectionHeading
           eyebrow="Scope & Topics"
           title="Technical Program Tracks"
-          description="BRAINS 2026 welcomes original research papers addressing challenges across decentralized structures, intelligent controls, automated networks, and robust security."
+          description="IIC-AIR 2027 welcomes original research papers addressing challenges across artificial intelligence, IoT, and robotics."
         />
 
         {/* Track summary pills */}
         <div className="flex flex-wrap gap-2 -mt-4">
           {[
-            { label: "Blockchain & DLT", color: "bg-primary/10 text-primary" },
-            { label: "Robotics & Automation", color: "bg-[#24a148]/10 text-[#24a148]" },
             { label: "Artificial Intelligence", color: "bg-ruby/10 text-ruby" },
-            { label: "Network Security", color: "bg-lemon/15 text-[#9b6829]" },
+            { label: "Internet of Things", color: "bg-primary/10 text-primary" },
+            { label: "Robotics & Automation", color: "bg-[#24a148]/10 text-[#24a148]" },
+            { label: "Cross-Track Applications", color: "bg-lemon/15 text-[#9b6829]" },
           ].map(({ label, color }) => (
             <span
               key={label}

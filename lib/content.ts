@@ -30,13 +30,16 @@ export const CommitteeMemberSchema = z.object({
   role: z.string(),
   affiliation: z.string(),
   photo: z.string().optional(),
-  group: z.enum(["patron", "chair", "tpc", "advisory"]),
+  group: z.enum(["patron", "chair", "tpc", "advisory", "local", "finance", "web_publicity"]),
+  email: z.string().optional(),
+  contact: z.string().optional(),
 });
 
 export const TrackSchema = z.object({
   domain: z.string(),
   topics: z.array(z.string()),
   icon: z.string(),
+  description: z.string().optional(),
 });
 
 export const NewsItemSchema = z.object({

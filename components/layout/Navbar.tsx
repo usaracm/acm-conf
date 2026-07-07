@@ -31,7 +31,7 @@ export default function Navbar() {
           onClick={closeMenu}
         >
           <span className="font-sans text-[14px] font-bold tracking-tight text-ink">
-            BRAINS <span className="text-primary">2026</span>
+            IIC-AIR <span className="text-primary">2027</span>
           </span>
         </Link>
 

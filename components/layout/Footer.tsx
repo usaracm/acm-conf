@@ -18,12 +18,12 @@ export default function Footer() {
               height={36}
               className="object-contain shrink-0"
             />
-            <span className="font-sans text-[13px] font-bold text-white">
-              BRAINS <span className="text-primary">2026</span>
+             <span className="font-sans text-[13px] font-bold text-white">
+              IIC-AIR <span className="text-primary">2027</span>
             </span>
           </div>
           <p className="text-[13px] leading-relaxed font-[300]">
-            Guru Gobind Singh Indraprastha University East Delhi Campus (EDC) ACM International Conference on Blockchain, Robotics, AI & Network Security 2026.
+            Guru Gobind Singh Indraprastha University East Delhi Campus (EDC) 1st Indraprastha International Conference on Artificial Intelligence, IoT and Robotics (IIC-AIR) 2027.
           </p>
           <div className="text-[11px] font-[300]">
             Organized by Guru Gobind Singh Indraprastha University East Delhi Campus (EDC) ACM Student Chapter, hosted at University School of Automation and Robotics (USAR).
@@ -118,7 +118,7 @@ export default function Footer() {
               </span>
             </div>
             <p className="text-[11px] leading-relaxed font-[300]">
-              BRAINS 2026 supports IEEE&apos;s Sustainability Initiative by promoting sustainable practices and technologies across computing systems.
+              IIC-AIR 2027 supports IEEE&apos;s Sustainability Initiative by promoting sustainable practices and technologies across computing systems.
             </p>
           </div>
         </div>
@@ -127,7 +127,7 @@ export default function Footer() {
       {/* Bottom bar */}
       <div className="mx-auto w-full max-w-7xl border-t border-white/10 mt-16 pt-8 flex flex-col sm:flex-row items-center justify-between gap-4">
         <p className="text-[12px] font-[300] text-center sm:text-left">
-          &copy; {currentYear} BRAINS 2026. All rights reserved. Non-commercial academic event.
+          &copy; {currentYear} IIC-AIR 2027. All rights reserved. Non-commercial academic event.
         </p>
         <p className="text-[12px] font-[300] text-center sm:text-right">
           Design guidelines enforced via ACM Chapter.

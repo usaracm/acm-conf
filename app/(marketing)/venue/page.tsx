@@ -10,8 +10,9 @@ const TRANSIT_STEPS = [
       </svg>
     ),
     steps: [
-      { label: "Karkarduma Metro Station", detail: "Blue Line / Pink Line — ~1.5 km, 5-min auto-rickshaw ride." },
-      { label: "Preet Vihar Metro Station", detail: "Blue Line — ~2.0 km, 7-min transit." },
+      { label: "Karkarduma Court Metro Station", detail: "Pink Line — ~1.1 km, 4-min transit / auto-rickshaw ride." },
+      { label: "Karkarduma Metro Station", detail: "Blue Line & Pink Line — ~1.5 km, 5-min transit / auto-rickshaw ride." },
+      { label: "Mansarovar Park Metro Station", detail: "Red Line — ~3.0 km, 10-min transit / auto-rickshaw ride." },
     ],
   },
   {
@@ -197,12 +198,66 @@ export default function VenuePage() {
             </div>
           </section>
 
-          {/* Accommodation note */}
-          <div className="border-l-4 border-l-lemon border border-hairline bg-canvas-soft p-4 sm:p-5">
-            <p className="text-[13px] text-ink-secondary font-[300] leading-relaxed">
-              <strong className="text-ink font-semibold">Accommodation:</strong> Recommended hotels near the venue include options in Preet Vihar and Karkarduma areas. A curated list with negotiated conference rates will be published closer to the event.
+          {/* Recommended Accommodations */}
+          <section className="flex flex-col gap-6 border-t border-hairline pt-8">
+            <h3 className="text-[20px] font-[300] tracking-[-0.2px] text-ink">
+              Recommended Accommodations
+            </h3>
+            <p className="text-[13px] text-ink-secondary font-[300] -mt-2 leading-relaxed">
+              For the convenience of delegates, we recommend the following hotels located near GGSIPU East Delhi Campus.
             </p>
-          </div>
+            <div className="grid grid-cols-1 sm:grid-cols-2 gap-4">
+              <div className="p-5 border border-hairline bg-canvas rounded-none flex flex-col justify-between gap-4">
+                <div className="flex flex-col gap-2">
+                  <span className="text-[16px] font-semibold text-ink leading-tight">The Leela Ambience Convention Hotel</span>
+                  <span className="text-[13px] text-ink-secondary font-[300] leading-relaxed">
+                    A luxury 5-star hotel offering premium amenities, fine dining, and excellent business facilities.
+                  </span>
+                  <span className="text-[12px] text-ink-mute font-[300]">
+                    Distance to college: ~500 m (approx. 5-min walk)
+                  </span>
+                </div>
+                <div className="flex gap-4 border-t border-hairline pt-3 mt-1 text-[12px] font-sans">
+                  <a
+                    href="https://maps.app.goo.gl/jcbgYKkwdHTdkuzP9"
+                    target="_blank"
+                    rel="noopener noreferrer"
+                    className="inline-flex items-center gap-1 text-primary hover:text-primary-deep font-medium transition-colors"
+                  >
+                    View Map
+                    <svg className="h-3 w-3" fill="none" viewBox="0 0 24 24" stroke="currentColor" strokeWidth={2}>
+                      <path strokeLinecap="round" strokeLinejoin="round" d="M10 6H6a2 2 0 00-2 2v10a2 2 0 002 2h10a2 2 0 002-2v-4M14 4h6m0 0v6m0-6L10 14" />
+                    </svg>
+                  </a>
+                </div>
+              </div>
+
+              <div className="p-5 border border-hairline bg-canvas rounded-none flex flex-col justify-between gap-4">
+                <div className="flex flex-col gap-2">
+                  <span className="text-[16px] font-semibold text-ink leading-tight">Ginger East Delhi</span>
+                  <span className="text-[13px] text-ink-secondary font-[300] leading-relaxed">
+                    A modern, reliable mid-range business hotel providing comfortable smart rooms and essential services.
+                  </span>
+                  <span className="text-[12px] text-ink-mute font-[300]">
+                    Distance to college: ~450 m (approx. 5-min walk)
+                  </span>
+                </div>
+                <div className="flex gap-4 border-t border-hairline pt-3 mt-1 text-[12px] font-sans">
+                  <a
+                    href="https://maps.app.goo.gl/n3oQZ8NHeRTZ9ReHA"
+                    target="_blank"
+                    rel="noopener noreferrer"
+                    className="inline-flex items-center gap-1 text-primary hover:text-primary-deep font-medium transition-colors"
+                  >
+                    View Map
+                    <svg className="h-3 w-3" fill="none" viewBox="0 0 24 24" stroke="currentColor" strokeWidth={2}>
+                      <path strokeLinecap="round" strokeLinejoin="round" d="M10 6H6a2 2 0 00-2 2v10a2 2 0 002 2h10a2 2 0 002-2v-4M14 4h6m0 0v6m0-6L10 14" />
+                    </svg>
+                  </a>
+                </div>
+              </div>
+            </div>
+          </section>
         </div>
       </div>
     </div>

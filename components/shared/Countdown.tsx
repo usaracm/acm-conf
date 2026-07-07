@@ -105,8 +105,8 @@ export default function Countdown({ targetDate, variant = "hero" }: CountdownPro
   // Error state: Render fallback date string safely
   if (isError) {
     return (
-      <div className="text-[14px] font-sans text-ruby">
-        {variant === "hero" ? "Event Date: November 6, 2026" : "Nov 6, 2026"}
+      <div className="text-[13px] font-sans text-ink-mute text-center" aria-label="Conference is live">
+        {variant === "hero" ? "Event Date: January 14, 2027" : "Jan 14, 2027"}
       </div>
     );
   }
@@ -116,7 +116,7 @@ export default function Countdown({ targetDate, variant = "hero" }: CountdownPro
   if (variant === "compact") {
     return (
       <div className="text-[13px] font-sans text-ink-mute tnum" aria-label="Compact countdown">
-        {days}d {hours}h {minutes}m to BRAINS 26
+        {days}d {hours}h {minutes}m to IIC-AIR 27
       </div>
     );
   }

@@ -11,8 +11,8 @@ const ibmPlexSans = IBM_Plex_Sans({
 });
 
 export const metadata: Metadata = {
-  title: "BRAINS 2026",
-  description: "GGSIPU EDC ACM International Conference on Blockchain, Robotics, AI & Network Security 2026.",
+  title: "IIC-AIR 2027",
+  description: "1st Indraprastha International Conference on Artificial Intelligence, IoT and Robotics (IIC-AIR) 2027.",
 };
 
 export default function RootLayout({

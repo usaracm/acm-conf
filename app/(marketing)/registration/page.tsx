@@ -127,7 +127,7 @@ export default function RegistrationPage() {
             <p className="text-[13px] text-white/60 font-[300] mt-1">Contact the Finance Chair or Organizing Committee directly.</p>
           </div>
           <a
-            href="mailto:brains2026@ggsipu.ac.in"
+            href="mailto:dr.atultripathi22@gmail.com"
             className="inline-flex h-11 items-center justify-center rounded-none bg-primary px-6 text-[14px] font-medium text-white transition-colors hover:bg-primary-deep shrink-0"
           >
             Email Finance Chair

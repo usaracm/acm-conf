@@ -83,7 +83,7 @@ export default function HomePage() {
               </span>
               <span className="hidden sm:inline h-3 w-px bg-[#24a148]/30" />
               <span className="text-[12px] text-ink-secondary font-[300]">
-                BRAINS 2026 supports IEEE&apos;s Sustainability Initiative — promoting sustainable practices and technologies across computing systems.
+                IIC-AIR 2027 supports IEEE&apos;s Sustainability Initiative — promoting sustainable practices and technologies across computing systems.
               </span>
             </div>
           </div>
@@ -110,7 +110,7 @@ export default function HomePage() {
         <div className="mx-auto max-w-7xl px-6 flex flex-col gap-12 sm:gap-16">
           <SectionHeading
             title="Technical Program Tracks"
-            description="BRAINS 2026 solicits original research papers in four key architectural domains. All accepted publications will follow ACM conference standards."
+            description="IIC-AIR 2027 solicits original research papers in three key technical areas. All accepted publications will follow ACM conference standards."
           />
           <TrackGrid tracks={tracks} />
         </div>
@@ -128,12 +128,12 @@ export default function HomePage() {
         </div>
       </section>
 
-      {/* 7. Keynote Speakers Section (Honest Empty State) */}
+      {/* 7. Keynote Speakers Section (Dynamic Speaker Grid) */}
       <section id="speakers-section" className="py-16 sm:py-24 surface-band border-t border-hairline">
         <div className="mx-auto max-w-7xl px-6 flex flex-col gap-10 sm:gap-12">
           <SectionHeading
             title="Keynote Speakers"
-            description="Leading researchers and industry architects present keynotes on the future of secure, autonomous computing."
+            description="Leading researchers and industry architects present keynotes on the future of artificial intelligence, IoT, and robotics."
           />
 
           {speakers.length === 0 ? (
@@ -144,11 +144,56 @@ export default function HomePage() {
                 </svg>
               </div>
               <p className="text-[14px] font-semibold text-ink">Keynote speakers to be announced</p>
-              <p className="text-[12px] text-ink-secondary font-[300]">Expected · July 2026</p>
+              <p className="text-[12px] text-ink-secondary font-[300]">Expected · September 2026</p>
             </div>
           ) : (
-            <div className="grid grid-cols-1 md:grid-cols-3 gap-6">
-              {/* Future speakers will render here */}
+            <div className="grid grid-cols-1 gap-6 w-full max-w-2xl mx-auto">
+              {speakers.map((speaker) => (
+                <div
+                  key={speaker.name}
+                  className="p-5 sm:p-6 border border-hairline border-l-4 border-l-primary bg-canvas rounded-none flex flex-col sm:flex-row gap-5 items-start"
+                >
+                  {/* Speaker photo block */}
+                  {speaker.photo && speaker.photo !== "/placeholder-speaker.png" && (
+                    <div className="h-20 w-20 relative shrink-0 border border-hairline bg-canvas-soft overflow-hidden">
+                      <Image
+                        src={speaker.photo}
+                        alt={speaker.name}
+                        fill
+                        className="object-cover"
+                        sizes="80px"
+                      />
+                    </div>
+                  )}
+                  <div className="flex flex-col gap-3 flex-1">
+                    <div className="flex flex-wrap items-center gap-2">
+                      <span className="inline-flex px-2 py-0.5 border border-[#24a148]/20 bg-[#24a148]/10 text-[#24a148] text-[9px] font-sans uppercase tracking-wider">
+                        Keynote Speaker
+                      </span>
+                      {speaker.links?.scholar && (
+                        <a
+                          href={speaker.links.scholar}
+                          target="_blank"
+                          rel="noopener noreferrer"
+                          className="inline-flex items-center gap-1 px-2 py-0.5 border border-primary/20 bg-primary/10 text-primary text-[9px] font-mono uppercase tracking-wider leading-none hover:bg-primary/20 transition-colors"
+                        >
+                          Google Scholar
+                          <svg className="h-2.5 w-2.5" fill="none" viewBox="0 0 24 24" stroke="currentColor" strokeWidth={2.5}>
+                            <path strokeLinecap="round" strokeLinejoin="round" d="M10 6H6a2 2 0 00-2 2v10a2 2 0 002 2h10a2 2 0 002-2v-4M14 4h6m0 0v6m0-6L10 14" />
+                          </svg>
+                        </a>
+                      )}
+                    </div>
+                    <div className="flex flex-col gap-0.5">
+                      <h4 className="text-[16px] font-semibold text-ink leading-tight">{speaker.name}</h4>
+                      <p className="text-[12px] text-ink-secondary font-[300] leading-normal">{speaker.title} &mdash; {speaker.institution}</p>
+                    </div>
+                    <p className="text-[12px] text-ink-secondary font-[300] italic leading-relaxed pt-2 border-t border-hairline">
+                      Specialization: {speaker.researchArea}
+                    </p>
+                  </div>
+                </div>
+              ))}
             </div>
           )}
         </div>

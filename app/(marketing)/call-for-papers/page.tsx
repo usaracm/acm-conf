@@ -8,7 +8,7 @@ export default function CallForPapersPage() {
         <SectionHeading
           eyebrow="Technical Submissions"
           title="Call for Papers"
-          description="BRAINS 2026 invites original, high-quality research papers presenting theoretical and practical advances in decentralized, intelligent, and secure systems."
+          description="IIC-AIR 2027 invites original, high-quality research papers presenting theoretical and practical advances in artificial intelligence, IoT, and robotics."
         />
 
         {/* Callout Card: Submit / Guidelines — blue-60 left accent */}
