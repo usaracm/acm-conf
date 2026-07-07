@@ -20,7 +20,11 @@ The pipeline uses GitHub Secrets for secure FTP authentication. The following re
 | `FTP_SERVER` | Your host FTP address or IP address | `ftp.yourdomain.com` or `192.168.1.1` |
 | `FTP_USERNAME` | Your FTP account username | `deploy@yourdomain.com` or `cpanelusername` |
 | `FTP_PASSWORD` | The password for the FTP account | `********` |
-| `FTP_TARGET_DIR` | (Optional) The folder on the server where files should go (defaults to `/public_html/`) | `/public_html/` or `/public_html/subfolder/` |
+| `FTP_TARGET_DIR` | (Optional) The folder on the server where files should go relative to the FTP login directory (defaults to `public_html/`). | `public_html/` or `public_html/conference/` |
+
+> [!NOTE]
+> **Dynamic Path Stripping**: If you configure the secret with an absolute server path (e.g., `/home/usarhosting/public_html/conference`), the CI/CD pipeline is designed to automatically detect and strip the absolute `/home/username/` prefix, converting it into a clean relative path (`public_html/conference/`) required by the FTP deployment runner.
+
 
 ---
 
