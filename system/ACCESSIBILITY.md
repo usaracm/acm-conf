@@ -1,4 +1,4 @@
-# ACCESSIBILITY.md — BRAINS 2026
+# ACCESSIBILITY.md — IIC-AIR 2027
 
 Target: WCAG AA, verified with axe DevTools zero critical/serious violations before merge.
 

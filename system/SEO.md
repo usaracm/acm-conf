@@ -1,4 +1,4 @@
-# SEO.md — BRAINS 2026
+# SEO.md — IIC-AIR 2027
 
 ## Per-Page Requirements
 

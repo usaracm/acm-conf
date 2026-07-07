@@ -1,4 +1,4 @@
-# CLAUDE.md — Coding Rules for BRAINS 2026
+# CLAUDE.md — Coding Rules for IIC-AIR 2027
 
 Read PRODUCT.md, DESIGN.md, ARCHITECTURE.md, COMPONENTS.md, CONTENT.md, MOTION.md, SEO.md, and ACCESSIBILITY.md before generating any code. This file is the entry point — start here.
 

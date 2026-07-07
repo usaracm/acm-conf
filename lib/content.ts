@@ -40,6 +40,8 @@ export const TrackSchema = z.object({
   topics: z.array(z.string()),
   icon: z.string(),
   description: z.string().optional(),
+  overview: z.string().optional(),
+  expandedTopics: z.array(z.string()).optional(),
 });
 
 export const NewsItemSchema = z.object({

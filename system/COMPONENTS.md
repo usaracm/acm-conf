@@ -1,4 +1,4 @@
-# COMPONENTS.md — BRAINS 2026
+# COMPONENTS.md — IIC-AIR 2027
 
 Every component below must be specified this way before Claude writes code: Purpose, Props, Variants, Loading, Error, Empty, Animation, Accessibility, Tests.
 

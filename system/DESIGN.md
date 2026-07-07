@@ -1,4 +1,4 @@
-# DESIGN.md — BRAINS 2026
+# DESIGN.md — IIC-AIR 2027
 
 ## Visual Inspiration
 

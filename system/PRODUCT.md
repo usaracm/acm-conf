@@ -1,4 +1,4 @@
-# PRODUCT.md — BRAINS 2026
+# PRODUCT.md — IIC-AIR 2027
 
 ## Conference
 
@@ -25,7 +25,7 @@ Feels like a flagship international research conference (NeurIPS/ICRA/CVPR/USENI
 
 ## Submission System
 
-OpenReview (venue short-code `BRAINS2026`, double-blind). Site links out — never builds custom submission forms or auth.
+OpenReview (venue short-code `IICAIR2027`, double-blind). Site links out — never builds custom submission forms or auth.
 
 ## Important Dates
 

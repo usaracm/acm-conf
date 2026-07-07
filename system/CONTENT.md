@@ -1,4 +1,4 @@
-# CONTENT.md — BRAINS 2026
+# CONTENT.md — IIC-AIR 2027
 
 ## Voice
 
@@ -9,7 +9,7 @@ Formal, factual, ACM/IEEE register. No exclamation marks. No marketing adjective
 **Track description**
 ```
 You are writing track descriptions for an ACM student-chapter international
-conference (BRAINS 2026). Tone: formal, academic, ACM/IEEE CFP register.
+conference (IIC-AIR 2027). Tone: formal, academic, ACM/IEEE CFP register.
 No marketing adjectives. No exclamation marks.
 
 Example: "This track solicits original contributions on consensus protocols,
@@ -50,7 +50,7 @@ Announcement about: {TOPIC}
 Write a 2-sentence formal introduction to the Organizing Committee section.
 State composition and role, no promotional tone.
 
-Example: "The BRAINS 2026 Organizing Committee comprises faculty, industry
+Example: "The IIC-AIR 2027 Organizing Committee comprises faculty, industry
 researchers, and student leadership from GGSIPU USAR and the ACM Student
 Chapter, responsible for program curation, technical review coordination,
 and event operations."

@@ -1,4 +1,4 @@
-# MOTION.md — BRAINS 2026
+# MOTION.md — IIC-AIR 2027
 
 Motion with purpose only. No animation longer than 600ms. Every animation below must respect `prefers-reduced-motion: reduce` — decorative motion disables entirely, functional transitions fall back to instant state change.
 

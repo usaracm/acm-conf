@@ -1,36 +1,73 @@
-This is a [Next.js](https://nextjs.org) project bootstrapped with [`create-next-app`](https://nextjs.org/docs/app/api-reference/cli/create-next-app).
+# IIC-AIR 2027 - 1st Indraprastha International Conference
 
-## Getting Started
+Official flagship website for the **1st Indraprastha International Conference on Artificial Intelligence, IoT and Robotics (IIC-AIR 2027)**.
 
-First, run the development server:
+The conference brings together global researchers, students, faculty, and industry professionals to present cutting-edge developments in core technological domains.
 
+---
+
+## 📅 Conference Details
+
+- **Workshops & Tutorials**: November 5, 2026
+- **Main Conference**: November 6–7, 2026
+- **Venue**: Guru Gobind Singh Indraprastha University (GGSIPU), East Delhi Campus, Surajmal Vihar, Delhi - 110032, India
+
+---
+
+## 🛠️ Technology Stack
+
+This project is built using modern, high-performance web standards:
+- **Framework**: [Next.js 16 (App Router)](https://nextjs.org/)
+- **Runtime & UI**: [React 19](https://react.dev/)
+- **Styling**: [Tailwind CSS v4](https://tailwindcss.com/)
+- **Animations**: [Framer Motion](https://www.framer.com/motion/)
+- **Scrolling**: [Lenis Smooth Scroll](https://lenis.darkroom.engineering/)
+- **Language**: [TypeScript](https://www.typescriptlang.org/)
+
+---
+
+## 🚀 Getting Started
+
+### Prerequisites
+
+Ensure you have Node.js 20+ installed on your system.
+
+### Installation
+
+1. Install all dependencies:
+   ```bash
+   npm install
+   ```
+
+2. Start the local development server:
+   ```bash
+   npm run dev
+   ```
+
+3. Open [http://localhost:3000](http://localhost:3000) in your browser.
+
+### Production Build
+
+To compile and export the application as a production-ready static site:
 ```bash
-npm run dev
-# or
-yarn dev
-# or
-pnpm dev
-# or
-bun dev
+npm run build
 ```
+This command generates an optimized static export in the `./out` directory.
 
-Open [http://localhost:3000](http://localhost:3000) with your browser to see the result.
+---
 
-You can start editing the page by modifying `app/page.tsx`. The page auto-updates as you edit the file.
+## ⚙️ CI/CD & Deployment
 
-This project uses [`next/font`](https://nextjs.org/docs/app/building-your-application/optimizing/fonts) to automatically optimize and load [Geist](https://vercel.com/font), a new font family for Vercel.
+This repository is equipped with a GitHub Actions workflow for automatic deployment:
 
-## Learn More
+- **Trigger**: Every push to the `main` branch.
+- **Workflow**: Runs lint checks (`npm run lint`), compiles the static build (`npm run build`), copies custom Apache server-side rewrite rules (`.htaccess` for clean routes and HTTPS redirection), and deploys the build output to cPanel hosting via FTP.
+- **Setup Details**: For instructions on configuring cPanel and GitHub repository secrets, please refer to the [Deployment Guide](file:///Users/sheelendra/Documents/zed/acm-conf/DEPLOYMENT.md).
 
-To learn more about Next.js, take a look at the following resources:
+---
 
-- [Next.js Documentation](https://nextjs.org/docs) - learn about Next.js features and API.
-- [Learn Next.js](https://nextjs.org/learn) - an interactive Next.js tutorial.
+## ♿ Accessibility & Design Principles
 
-You can check out [the Next.js GitHub repository](https://github.com/vercel/next.js) - your feedback and contributions are welcome!
-
-## Deploy on Vercel
-
-The easiest way to deploy your Next.js app is to use the [Vercel Platform](https://vercel.com/new?utm_medium=default-template&filter=next.js&utm_source=create-next-app&utm_campaign=create-next-app-readme) from the creators of Next.js.
-
-Check out our [Next.js deployment documentation](https://nextjs.org/docs/app/building-your-application/deploying) for more details.
+- **Academic First**: Visual clarity and authoritative presentation of tracks, speakers, and milestones.
+- **Accessibily-Compliant**: Built to WCAG level AA guidelines, supporting high-contrast displays, screen readers, and `prefers-reduced-motion` safety.
+- **Responsive Layout**: Fluid design tailored for mobile, tablet, and desktop screens.

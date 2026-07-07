@@ -46,60 +46,6 @@ const TRACK_COLORS: Record<number, { icon: string; badge: string; hover: string;
   },
 };
 
-const COMPREHENSIVE_DETAILS: Record<string, { overview: string; details: string[] }> = {
-  "Artificial Intelligence & Machine Learning": {
-    overview: "This track invites papers presenting novel algorithmic architectures, theoretical foundations, or innovative applications of machine learning, neural networks, computer vision, and generative intelligence. We focus on scalability, trust, safety, and transparency in real-world scenarios.",
-    details: [
-      "Deep Learning & Advanced Neural Networks",
-      "Large Language Models & Generative AI",
-      "Explainable & Responsible AI Systems",
-      "Computer Vision & Video Analysis",
-      "Pattern Recognition & Feature Extraction",
-      "Reinforcement Learning & Decision Making",
-      "Natural Language Processing & Translation",
-      "Ethical Frameworks & Bias Mitigation"
-    ]
-  },
-  "Internet of Things (IoT) & Smart Infrastructure": {
-    overview: "Focuses on the engineering of secure, robust, and scalable Internet of Things (IoT) systems, fog/edge networking, intelligent sensor networks, and smart cities. Papers should address real-world system constraints, zero-trust security designs, or wireless networking protocols.",
-    details: [
-      "Edge Computing & Fog Networking",
-      "IoT Security & Zero-Trust Architectures",
-      "Smart Cities & Connected Sensors",
-      "Smart Grid Systems & Energy Harvesting",
-      "Next-Gen Wireless Communication (5G/6G)",
-      "V2X (Vehicle-to-Everything) Networks",
-      "Resource-Constrained IoT Scheduling",
-      "Real-time Data Streaming & Processing"
-    ]
-  },
-  "Robotics & Autonomous Systems": {
-    overview: "Brings together research in advanced control engineering, autonomous navigation, human-robot interaction, medical assistive systems, and bio-inspired robotics. We encourage papers detailing physical robot implementations, theoretical control designs, swarm behaviors, or simulation frameworks.",
-    details: [
-      "Control Theory & Swarm Robotics",
-      "Human-Robot Interaction (HRI)",
-      "Unmanned Aerial Vehicles (UAVs) & Drones",
-      "Biologically Inspired & Cognitive Robotics",
-      "Medical, Surgical & Assistive Robots",
-      "Path Planning & Navigation in Dynamic Envs",
-      "Manipulators, Grasping & Kinematics",
-      "Sim-to-Real Transfer & Validation Methods"
-    ]
-  },
-  "Cross-Track Applications & Systems": {
-    overview: "Focuses on the convergence of AI, IoT, and Robotics to build holistic cyber-physical systems, digital twins, and autonomous networks. This track welcomes interdisciplinary submissions that bridge the gaps between hardware, communications, and intelligence, with emphasis on security and sustainability.",
-    details: [
-      "Autonomous Swarm Networking & Edge AI",
-      "Cyber-Physical Systems & Digital Twins",
-      "AI-Enabled Robotic Networks for Smart Cities",
-      "Smart Grid Systems & Sustainable Computing",
-      "Environmental Monitoring & Green Technology",
-      "Collaborative Mobile Robots & Sensing",
-      "Hardware-in-the-loop Autonomous Systems",
-      "Industrial Automation & Safety Standards"
-    ]
-  }
-};
 
 export default function TrackCard({ track, index }: TrackCardProps) {
   const [isOpen, setIsOpen] = useState(false);
@@ -219,13 +165,13 @@ export default function TrackCard({ track, index }: TrackCardProps) {
               <div className="flex flex-col gap-5 text-[14px] leading-relaxed text-ink-secondary font-[300]">
                 <div>
                   <h4 className="font-semibold text-ink text-[12px] uppercase tracking-wider font-sans mb-1.5">Track Scope</h4>
-                  <p>{COMPREHENSIVE_DETAILS[track.domain]?.overview || track.description}</p>
+                  <p>{track.overview || track.description}</p>
                 </div>
                 
                 <div>
                   <h4 className="font-semibold text-ink text-[12px] uppercase tracking-wider font-sans mb-2">Expanded Areas of Interest</h4>
                   <ul className="grid grid-cols-1 sm:grid-cols-2 gap-x-6 gap-y-2 text-[13px]">
-                    {(COMPREHENSIVE_DETAILS[track.domain]?.details || track.topics).map((topic, i) => (
+                    {(track.expandedTopics || track.topics).map((topic, i) => (
                       <li key={i} className="flex items-start gap-2">
                         <span className={`mt-2 h-1 w-1 shrink-0 rounded-none ${colors.bullet}`} />
                         <span>{topic}</span>
