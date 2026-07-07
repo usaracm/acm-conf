@@ -16,9 +16,14 @@ export default function Timeline({ milestones }: TimelineProps) {
   const classifiedMilestones = useMemo(() => {
     // Current date for comparison: set to July 7, 2026 based on workspace context
     const currentDate = new Date("2026-07-07");
-    let firstUpcomingFound = false;
 
-    return milestones.map((milestone) => {
+    // Find the index of the first milestone that is not past
+    const firstUpcomingIndex = milestones.findIndex((milestone) => {
+      const milestoneDate = new Date(milestone.date);
+      return !(milestone.done || milestoneDate < currentDate);
+    });
+
+    return milestones.map((milestone, index) => {
       const milestoneDate = new Date(milestone.date);
       const isPast = milestone.done || milestoneDate < currentDate;
 
@@ -26,9 +31,8 @@ export default function Timeline({ milestones }: TimelineProps) {
 
       if (isPast) {
         status = "completed";
-      } else if (!firstUpcomingFound) {
+      } else if (index === firstUpcomingIndex) {
         status = "current";
-        firstUpcomingFound = true;
       }
 
       return {

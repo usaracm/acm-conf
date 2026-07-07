@@ -24,14 +24,17 @@ export default function StatCard({ stat }: StatCardProps) {
     if (!isInView) return;
 
     if (shouldReduceMotion) {
-      setDisplayValue(stat.value);
-      return;
+      const frameId = requestAnimationFrame(() => {
+        setDisplayValue(stat.value);
+      });
+      return () => cancelAnimationFrame(frameId);
     }
 
-    let start = 0;
+    const start = 0;
     const end = stat.value;
     const duration = 1200; // 1.2s max duration
     const startTime = performance.now();
+    let animationFrameId: number;
 
     const animateCount = (timestamp: number) => {
       const progress = Math.min((timestamp - startTime) / duration, 1);
@@ -42,13 +45,19 @@ export default function StatCard({ stat }: StatCardProps) {
       setDisplayValue(currentVal);
 
       if (progress < 1) {
-        requestAnimationFrame(animateCount);
+        animationFrameId = requestAnimationFrame(animateCount);
       } else {
         setDisplayValue(end);
       }
     };
 
-    requestAnimationFrame(animateCount);
+    animationFrameId = requestAnimationFrame(animateCount);
+
+    return () => {
+      if (animationFrameId) {
+        cancelAnimationFrame(animationFrameId);
+      }
+    };
   }, [isInView, stat.value, shouldReduceMotion]);
 
   const fullSentenceLabel = `Statistic: ${stat.value}${stat.suffix || ""} for ${stat.label}`;
