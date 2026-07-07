@@ -16,7 +16,7 @@ jobs:
       - name: Setup Node.js
         uses: actions/setup-node@v4
         with:
-          node-version: 20
+          node-version: 22
           cache: 'npm'
 
       - name: Install Dependencies
@@ -28,6 +28,25 @@ jobs:
       - name: Build & Export Static Site
         run: npm run build
 
+      - name: Format Server Directory
+        id: format-dir
+        run: |
+          DIR="${{ secrets.FTP_TARGET_DIR }}"
+          # Default to /public_html/ if empty
+          if [ -z "$DIR" ]; then
+            DIR="/public_html/"
+          fi
+          # Force leading slash
+          if [[ ! "$DIR" =~ ^/ ]]; then
+            DIR="/$DIR"
+          fi
+          # Force trailing slash
+          if [[ ! "$DIR" =~ /$ ]]; then
+            DIR="$DIR/"
+          fi
+          echo "Formatted directory: $DIR"
+          echo "server_dir=$DIR" >> $GITHUB_OUTPUT
+
       - name: Deploy to cPanel via FTP
         uses: SamKirkland/FTP-Deploy-Action@v4.3.5
         with:
@@ -35,5 +54,5 @@ jobs:
           username: ${{ secrets.FTP_USERNAME }}
           password: ${{ secrets.FTP_PASSWORD }}
           local-dir: ./out/
-          server-dir: ${{ secrets.FTP_TARGET_DIR || '/public_html/' }}
+          server-dir: ${{ steps.format-dir.outputs.server_dir }}
           dangerous-clean-slate: false
