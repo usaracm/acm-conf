@@ -39,6 +39,9 @@ jobs:
 
           echo "Original input: $DIR"
 
+          # Strip full absolute cPanel path including public_html/conference
+          DIR=$(echo "$DIR" | sed -E 's|^(/?home/[^/]+/public_html/conference/?)?||')
+
           # Strip /home/username/ or home/username/ from the start
           DIR=$(echo "$DIR" | sed -E 's|^(/?home/[^/]+/)||')
 
